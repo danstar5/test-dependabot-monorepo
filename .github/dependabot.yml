@@ -1,7 +1,7 @@
 version: 2
 updates:
   - package-ecosystem: "npm"
-    directory: "/apps"
+    directory: "/apps/repo1"
     schedule:
       interval: "daily"
     allow:
@@ -24,4 +24,15 @@ updates:
     milestone: 4
     open-pull-requests-limit: 3 # by default max is 5
     commit-message:
-      prefix: "[dependabot module-update] "
+      prefix: "[dependabot repo1-error] "
+  - package-ecosystem: "npm"
+    directory: "/apps/repo2"
+    schedule:
+      interval: "daily"
+    allow:
+      - dependency-type: "all"
+    # - dependency-name: 'lodash'
+    assignees:
+      - "Daniely2564"
+    commit-message:
+      prefix: "[dependabot repo2-error] "
